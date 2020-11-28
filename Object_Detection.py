@@ -64,11 +64,6 @@ while True:
             cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
             cv2.putText(frame, label + " " + str(round(confidence, 2)), (x, y + 30), font, 3, color, 3)
 
-
-
-    elapsed_time = time.time() - starting_time
-    fps = frame_id / elapsed_time
-    cv2.putText(frame, "FPS: " + str(round(fps, 2)), (10, 50), font, 4, (0, 0, 0), 3)
     cv2.imshow("Image", frame)
     key = cv2.waitKey(1)
     if key == 27:
